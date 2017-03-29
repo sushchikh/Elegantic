@@ -1,1 +1,122 @@
 @import 'reset'
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic')
+
+//Variables
+$black: #333
+$white: #fafafa
+$margin-left: 60px
+
+$padding-left: 100px
+$padding-top: 50px
+$padding-right: 100px
+$padding-top_mobile: 20px
+$padding-left_mobile: 10px
+$padding-right_mobile: 10px
+
+$hover: #932525
+
+
+
+body
+	font-family: "opensans", verdana, arial
+	color: $black
+	background-color: $white
+
+
+// ##     ## ########    ###    ########  ######## ########
+// ##     ## ##         ## ##   ##     ## ##       ##     ##
+// ##     ## ##        ##   ##  ##     ## ##       ##     ##
+// ######### ######   ##     ## ##     ## ######   ########
+// ##     ## ##       ######### ##     ## ##       ##   ##
+// ##     ## ##       ##     ## ##     ## ##       ##    ##
+// ##     ## ######## ##     ## ########  ######## ##     ##
+
+
+header
+	padding-left: $padding-left
+	padding-top: $padding-top
+	@media only screen and (max-width: 450px)
+		padding-top: $padding-top_mobile
+		padding-left: $padding-left_mobile
+
+.logo
+	text-transform: uppercase
+	display: inline-block
+	float: left
+	@media only screen and (max-width: 450px)
+		text-align: center
+
+.header_logo_state
+	font-weight: 700
+	font-size: 30px
+
+.burger
+	font-size: 30px
+	display: none
+	text-align: right
+	padding-right: $padding-right
+	@media only screen and (max-width: 750px)
+		display: block
+	@media only screen and (max-width: 450px)	
+		padding-right: $padding-right_mobile
+
+
+// ##    ##    ###    ##     ##
+// ###   ##   ## ##   ##     ##
+// ####  ##  ##   ##  ##     ##
+// ## ## ## ##     ## ##     ##
+// ##  #### #########  ##   ##
+// ##   ### ##     ##   ## ##
+// ##    ## ##     ##    ###
+
+nav
+	text-transform: uppercase
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	flex-wrap: no-wrap
+	padding-left: $padding-left
+	padding-right: $padding-right
+	padding-top: $padding-top
+	font-size: 14px
+	clear: left
+	@media only screen and (max-width: 1100px)
+		flex-wrap: wrap
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		padding-top: $padding-top_mobile	
+	@media only screen and (max-width: 450px)
+		padding-left: $padding-left_mobile
+		padding-right: $padding-right_mobile
+
+.menu_desctop,
+.cart_desctop,
+.login_desctop
+	display: inline-block
+
+.menu_desctop
+	flex-grow: 2
+	@media only screen and (max-width: 1100px)
+		order: 2
+	@media only screen and (max-width: 750px)
+		display: none
+.menu_desctop ul li
+	display: inline-block
+	margin-right: 50px
+	@media only screen and (max-width: 1100px)
+		margin-right: 0px
+		padding: 10px 25px
+.menu_desctop ul li:hover
+	border-bottom: 1px solid $hover	
+.menu_desctop ul li a
+	text-decoration: none	
+	color: $black
+.menu_desctop ul li a:hover
+	color: $hover
+
+.cart_desctop
+	margin-right: 60px
+	@media only screen and (max-width: 1100px)
+		margin-right: 0px
+		margin-bottom: 10px
