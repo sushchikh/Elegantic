@@ -55,10 +55,16 @@ header
 	display: none
 	text-align: right
 	padding-right: $padding-right
+	cursor: pointer
+	&:active
+		transform: translateY(2px)
+	&:hover
+		color: #666		
 	@media only screen and (max-width: 750px)
 		display: block
 	@media only screen and (max-width: 450px)	
 		padding-right: $padding-right_mobile
+	
 
 
 // ##    ##    ###    ##     ##
@@ -97,16 +103,25 @@ nav
 
 .menu_desctop
 	flex-grow: 2
+	transition: all .2s ease
+	background-color: $white
 	@media only screen and (max-width: 1100px)
 		order: 2
 	@media only screen and (max-width: 750px)
-		display: none
+		// display: none
+		opacity: 0
+		transform: scale(0)
+		transform-origin: 250% 0%
+		margin-top: -170px
 .menu_desctop ul li
 	display: inline-block
 	margin-right: 50px
 	@media only screen and (max-width: 1100px)
 		margin-right: 0px
 		padding: 10px 25px
+	@media only screen and (max-width: 750px)	
+		display: block
+		text-align: center
 .menu_desctop ul li:hover
 	border-bottom: 1px solid $hover	
 .menu_desctop ul li a
@@ -120,3 +135,22 @@ nav
 	@media only screen and (max-width: 1100px)
 		margin-right: 0px
 		margin-bottom: 10px
+
+
+
+//    ###    ##    ## #### ##     ## ########
+//   ## ##   ###   ##  ##  ###   ### ##
+//  ##   ##  ####  ##  ##  #### #### ##
+// ##     ## ## ## ##  ##  ## ### ## ######
+// ######### ##  ####  ##  ##     ## ##
+// ##     ## ##   ###  ##  ##     ## ##
+// ##     ## ##    ## #### ##     ## ########
+
+
+.menu_show
+	// display: block
+	transform: scale(1)
+	opacity: 1
+	background-color: #eee
+	border-radius: 10px
+	margin-top: 20px
