@@ -35,7 +35,7 @@ body
 
 
 header
-	padding-left: $padding_left
+	padding-left: $padding_left*3.3
 	padding-top: $padding_top
 	@media only screen and (max-width: 450px)
 		padding-top: $padding_top_mobile
@@ -83,8 +83,8 @@ nav
 	justify-content: space-between
 	align-items: flex-start
 	flex-wrap: no-wrap
-	padding-left: $padding_left
-	padding-right: $padding_right
+	padding-left: $padding_left*3.3
+	padding-right: $padding_right*3.3
 	padding-top: $padding_top
 	font-size: 14px
 	clear: left
@@ -129,6 +129,9 @@ nav
 .menu_desctop ul li a
 	text-decoration: none	
 	color: $black
+	&:active
+		position: relative
+		top: 2px
 .menu_desctop ul li a:hover
 	color: $hover
 
@@ -150,14 +153,14 @@ nav
 //  ######  ##     ## ##     ##
 
 .carousel
-	background-image: url(../img/carousel/slide-02.jpg)
+	background-image: url(../img/carousel/slide-04.jpg)
 	background-size: cover
 	background-position: center center
 	background-repeat: no-repeat
 	height: 700px
 	width: 100%
 	padding-top: $padding_top*4
-	padding-left: $padding_left
+	padding-left: $padding_left*3.3
 	color: $white
 	margin-top: $margin_top
 	@media only screen and (max-width: 700px)
@@ -198,6 +201,9 @@ nav
 	cursor: pointer
 	&:hover
 		background-color: #999
+	&:active
+		position: relative
+		top: 2px		
 
 
 // ########  ##        #######   ######  ##    ##  ######
@@ -271,6 +277,9 @@ nav
 		font-size: 20px
 
 .block_element_btn
+	&:active
+		position: relative
+		top: 2px
 	@extend .carousel_btn
 	text-align: center
 	@media only screen and (max-width: 400px)
@@ -302,13 +311,14 @@ nav
 // ##    ## ########  ###  ###   ######
 
 .news_container
-	margin: 0px 30px $margin_top
+	margin: 0px auto $margin_top
 	border: 1px solid gray
 	padding: $padding_top_mobile $padding_left
 	display: flex
 	justify-content: center
 	align-items: flex-end
 	flex-wrap: wrap
+	max-width: 1240px
 	@media only screen and (max-width: 1200px)
 		padding: $padding_top_mobile $padding_left_mobile
 	@media only screen and (max-width: 900px)
@@ -346,6 +356,11 @@ nav
 	input
 		width: 100%
 
+.news_btn
+	&:active
+		position: relative
+		top: 2px
+
 // ########  #######   #######  ######## ######## ########
 // ##       ##     ## ##     ##    ##    ##       ##     ##
 // ##       ##     ## ##     ##    ##    ##       ##     ##
@@ -371,7 +386,7 @@ footer
 	flex-grow: 1	
 	color: $white
 	margin: 10px
-	max-width: 33%
+	max-width: 400px 
 	text-align: center
 	color: #999
 	font-size: 14px
@@ -424,6 +439,9 @@ footer
 	cursor: pointer
 	&:hover .social_icon
 		color: $hover
+	&:active
+		position: relative
+		top: 2px		
 
 .social_icon	
 	font-size: 30px
