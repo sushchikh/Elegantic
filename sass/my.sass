@@ -4,14 +4,16 @@
 //Variables
 $black: #333
 $white: #fafafa
-$margin-left: 60px
+$white_hover: #eee
+$margin_left: 60px
+$margin_top: 60px
 
-$padding-left: 100px
-$padding-top: 50px
-$padding-right: 100px
-$padding-top_mobile: 20px
-$padding-left_mobile: 10px
-$padding-right_mobile: 10px
+$padding_left: 100px
+$padding_top: 50px
+$padding_right: 100px
+$padding_top_mobile: 20px
+$padding_left_mobile: 10px
+$padding_right_mobile: 10px
 
 $hover: #932525
 
@@ -33,11 +35,11 @@ body
 
 
 header
-	padding-left: $padding-left
-	padding-top: $padding-top
+	padding-left: $padding_left
+	padding-top: $padding_top
 	@media only screen and (max-width: 450px)
-		padding-top: $padding-top_mobile
-		padding-left: $padding-left_mobile
+		padding-top: $padding_top_mobile
+		padding-left: $padding_left_mobile
 
 .logo
 	text-transform: uppercase
@@ -54,7 +56,7 @@ header
 	font-size: 30px
 	display: none
 	text-align: right
-	padding-right: $padding-right
+	padding-right: $padding_right
 	cursor: pointer
 	&:active
 		transform: translateY(2px)
@@ -63,7 +65,7 @@ header
 	@media only screen and (max-width: 750px)
 		display: block
 	@media only screen and (max-width: 450px)	
-		padding-right: $padding-right_mobile
+		padding-right: $padding_right_mobile
 	
 
 
@@ -81,9 +83,9 @@ nav
 	justify-content: space-between
 	align-items: flex-start
 	flex-wrap: no-wrap
-	padding-left: $padding-left
-	padding-right: $padding-right
-	padding-top: $padding-top
+	padding-left: $padding_left
+	padding-right: $padding_right
+	padding-top: $padding_top
 	font-size: 14px
 	clear: left
 	@media only screen and (max-width: 1100px)
@@ -91,10 +93,10 @@ nav
 		flex-direction: column
 		justify-content: center
 		align-items: center
-		padding-top: $padding-top_mobile	
+		padding-top: $padding_top_mobile	
 	@media only screen and (max-width: 450px)
-		padding-left: $padding-left_mobile
-		padding-right: $padding-right_mobile
+		padding-left: $padding_left_mobile
+		padding-right: $padding_right_mobile
 
 .menu_desctop,
 .cart_desctop,
@@ -122,8 +124,8 @@ nav
 	@media only screen and (max-width: 750px)	
 		display: block
 		text-align: center
-.menu_desctop ul li:hover
-	border-bottom: 1px solid $hover	
+// .menu_desctop ul li:hover
+// 	border-bottom: 1px solid $hover	
 .menu_desctop ul li a
 	text-decoration: none	
 	color: $black
@@ -136,6 +138,296 @@ nav
 		margin-right: 0px
 		margin-bottom: 10px
 
+
+
+
+//  ######     ###    ########
+// ##    ##   ## ##   ##     ##
+// ##        ##   ##  ##     ##
+// ##       ##     ## ########
+// ##       ######### ##   ##
+// ##    ## ##     ## ##    ##
+//  ######  ##     ## ##     ##
+
+.carousel
+	background-image: url(../img/carousel/slide-02.jpg)
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	height: 700px
+	width: 100%
+	padding-top: $padding_top*4
+	padding-left: $padding_left
+	color: $white
+	margin-top: $margin_top
+	@media only screen and (max-width: 700px)
+		padding-left: $padding_left_mobile
+		text-align: center
+		padding-top: $padding_top_mobile
+		height: auto
+		padding-bottom: $padding_top_mobile
+	@media only screen and (max-width: 500px)
+		margin-top: $padding_top_mobile
+
+.carousel_title
+	color: $white
+	text-transform: uppercase
+	font-size: 50px
+	font-weight: 700
+	@media only screen and (max-width: 700px)
+		font-size: 40px
+	@media only screen and (max-width: 500px)
+		font-size: 30px
+	@media only screen and (max-width: 400px)
+		font-size: 20px
+.carousel_text
+	margin-top: $margin_top
+	display: inline-block
+	width: 500px
+	@media only screen and (max-width: 500px)
+		width: 100%
+		padding: $padding_top_mobile $padding_left_mobile
+
+.carousel_btn
+	background-color: $white
+	display: inline-block
+	margin-top: $margin_top
+	color: $black
+	text-transform: uppercase
+	padding: 10px 30px
+	cursor: pointer
+	&:hover
+		background-color: #999
+
+
+// ########  ##        #######   ######  ##    ##  ######
+// ##     ## ##       ##     ## ##    ## ##   ##  ##    ##
+// ##     ## ##       ##     ## ##       ##  ##   ##
+// ########  ##       ##     ## ##       #####     ######
+// ##     ## ##       ##     ## ##       ##  ##         ##
+// ##     ## ##       ##     ## ##    ## ##   ##  ##    ##
+// ########  ########  #######   ######  ##    ##  ######
+
+.blocks_container
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	flex-wrap: no-wrap
+	padding: 0px 20px
+	@media only screen and (max-width: 800px)
+		flex-wrap: wrap
+
+.block_element
+	flex-grow: 1
+	margin: $margin_top $padding_left_mobile
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+	flex-direction: column
+	position: relative
+	padding-top: $padding_top*2
+	padding-bottom: $padding_top*2
+	color: $white
+	min-width: 200px
+	max-width: 400px
+	@media only screen and (max-width: 800px)
+		margin: $padding_top_mobile $padding_left_mobile
+		padding: $padding_top_mobile $padding_left_mobile
+
+
+.block_element_subtitle
+	padding-bottom: $padding_top*2
+	text-transform: uppercase
+	position: relative
+	@media only screen and (max-width: 500px)
+		padding-bottom: $padding_top_mobile
+	&:before
+		content: ""
+		display: inline-block
+		position: relative
+		border-top: 1px solid $white
+		width: 40px
+		left: -10px
+		top: -5px
+	&:after
+		content: ""
+		display: inline-block
+		position: relative
+		border-top: 1px solid $white
+		width: 40px
+		left: 10px
+		top: -5px	
+
+
+
+
+.block_element_title
+	text-transform: uppercase
+	font-size: 35px
+	padding-bottom: $padding_top
+	text-align: center
+	@media only screen and (max-width: 300px)
+		font-size: 20px
+
+.block_element_btn
+	@extend .carousel_btn
+	text-align: center
+	@media only screen and (max-width: 400px)
+		font-size: 14px
+		margin-top: $padding_top_mobile
+
+.first,
+.second,
+.third
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+.first
+	background-image: url(../img/blocks/1.jpg)
+.second
+	background-image: url(../img/blocks/2.jpg)
+.third
+	background-image: url(../img/blocks/3.jpg)
+
+
+
+// ##    ## ######## ##      ##  ######
+// ###   ## ##       ##  ##  ## ##    ##
+// ####  ## ##       ##  ##  ## ##
+// ## ## ## ######   ##  ##  ##  ######
+// ##  #### ##       ##  ##  ##       ##
+// ##   ### ##       ##  ##  ## ##    ##
+// ##    ## ########  ###  ###   ######
+
+.news_container
+	margin: 0px 30px $margin_top
+	border: 1px solid gray
+	padding: $padding_top_mobile $padding_left
+	display: flex
+	justify-content: center
+	align-items: flex-end
+	flex-wrap: wrap
+	@media only screen and (max-width: 1200px)
+		padding: $padding_top_mobile $padding_left_mobile
+	@media only screen and (max-width: 900px)
+		flex-direction: column
+		align-items: center
+		text-align: center
+.news_title_container
+	display: inline-block
+	flex-grow: 1
+.news_title
+	font-size: 35px
+	text-transform: uppercase
+	letter-spacing: 2px
+	font-weight: 700
+	@media only screen and (max-width: 400px)
+		font-size: 20px
+
+.news_subtitle
+	text-transform: uppercase
+	@media only screen and (max-width: 900px)
+		margin: 10px auto
+	@media only screen and (max-width: 400px)	
+		font-size: 14px
+.news_input_container
+	flex-grow: 1
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+.news_input
+	flex-grow: 1
+	margin-right: 20px
+	@media only screen and (max-width: 407px)
+		margin-bottom: 10px
+	input
+		width: 100%
+
+// ########  #######   #######  ######## ######## ########
+// ##       ##     ## ##     ##    ##    ##       ##     ##
+// ##       ##     ## ##     ##    ##    ##       ##     ##
+// ######   ##     ## ##     ##    ##    ######   ########
+// ##       ##     ## ##     ##    ##    ##       ##   ##
+// ##       ##     ## ##     ##    ##    ##       ##    ##
+// ##        #######   #######     ##    ######## ##     ##
+
+footer
+	padding: $padding_top 30px
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	flex-wrap: no-wrap
+	background-color: #333
+	@media only screen and (max-width: 800px)
+		flex-direction: column
+		text-align: center
+		align-items: center
+
+.footer_element
+	text-align: center
+	flex-grow: 1	
+	color: $white
+	margin: 10px
+	max-width: 33%
+	text-align: center
+	color: #999
+	font-size: 14px
+	@media only screen and (max-width: 800px)
+		text-align: center
+		max-width: 100%
+
+.footer_element_title
+	font-size: 20px
+	text-transform: uppercase
+	position: relative
+	margin-bottom: 20px
+	color: $white
+	&:before
+		content: ""
+		display: inline-block
+		position: relative
+		border-top: 1px solid $white
+		width: 40px
+		left: -10px
+		top: -7px
+	&:after
+		content: ""
+		display: inline-block
+		position: relative
+		border-top: 1px solid $white
+		width: 40px
+		left: 10px
+		top: -7px	
+
+.about_text
+	p
+		margin-bottom: 20px
+
+.adress
+	margin-bottom: 20px
+
+.social_container
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+.social_element
+	margin: 0px 10px
+	text-transform: uppercase
+	font-size: 12px
+	font-weight: 100
+
+.social_element
+	cursor: pointer
+	&:hover .social_icon
+		color: $hover
+
+.social_icon	
+	font-size: 30px
+	color: $white
 
 
 //    ###    ##    ## #### ##     ## ########
