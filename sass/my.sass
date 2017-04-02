@@ -37,6 +37,8 @@ body
 header
 	padding-left: $padding_left*3.3
 	padding-top: $padding_top
+	@media only screen and (max-width: 1500px)
+		padding-left: $padding_left
 	@media only screen and (max-width: 450px)
 		padding-top: $padding_top_mobile
 		padding-left: $padding_left_mobile
@@ -88,6 +90,10 @@ nav
 	padding-top: $padding_top
 	font-size: 14px
 	clear: left
+	@media only screen and (max-width: 1500px)
+		padding-left: $padding_left
+	@media only screen and (max-width: 1300px)
+		padding-right: $padding_right
 	@media only screen and (max-width: 1100px)
 		flex-wrap: wrap
 		flex-direction: column
@@ -118,6 +124,8 @@ nav
 .menu_desctop ul li
 	display: inline-block
 	margin-right: 50px
+	@media only screen and (max-width: 1600px)
+		margin-right: 25px
 	@media only screen and (max-width: 1100px)
 		margin-right: 0px
 		padding: 10px 25px
@@ -159,13 +167,23 @@ nav
 	// background-size: cover
 	// background-position: center center
 	// background-repeat: no-repeat
-	height: 700px
+	// height: 700px
 	width: 100%
 	padding-top: $padding_top*4
 	padding-left: $padding_left*3.3
+	padding-bottom: $padding_top*4
 	color: $white
 	margin-top: $margin_top
 	position: relative
+	@media only screen and (max-width: 1800px)
+		padding-top: $padding_top*2
+		padding-bottom: $padding_top*2
+	@media only screen and (max-width: 1500px)
+		padding-left: $padding_left	
+		padding-top: $padding_top
+		padding-bottom: $padding_top
+	@media only screen and (max-width: 1000px)
+		padding-top: $padding_top_mobile
 	@media only screen and (max-width: 700px)
 		padding-left: $padding_left_mobile
 		text-align: center
@@ -174,13 +192,17 @@ nav
 		padding-bottom: $padding_top_mobile
 	@media only screen and (max-width: 500px)
 		margin-top: $padding_top_mobile
-
+		padding-left: 0px
+	.carousel_btn
+		@media only screen and (max-width: 630px)	
+			display: none
 .carousel_background
 	width: 100%
 	height: 100%
 	position: absolute
 	top: 0
 	left: 0
+	overflow: hidden
 
 .carousel_element
 	opacity: 0
@@ -188,15 +210,18 @@ nav
 	left: 0
 	top: 0
 	transition: all .3s ease
+	// min-height: 700px
+	img
+		// object-fit: contain
 
 .carousel_title
 	color: $white
 	text-transform: uppercase
 	font-size: 50px
 	font-weight: 700
-	@media only screen and (max-width: 700px)
+	@media only screen and (max-width: 900px)
 		font-size: 40px
-	@media only screen and (max-width: 500px)
+	@media only screen and (max-width: 700px)
 		font-size: 30px
 	@media only screen and (max-width: 400px)
 		font-size: 20px
@@ -204,9 +229,15 @@ nav
 	margin-top: $margin_top
 	display: inline-block
 	width: 500px
+	@media only screen and (max-width: 1300px)
+		margin-top: $padding_top_mobile
+	@media only screen and (max-width: 900px)	
+		margin-top: $padding_top_mobile/2
 	@media only screen and (max-width: 500px)
 		width: 100%
 		padding: $padding_top_mobile $padding_left_mobile
+		background-color: #333
+
 
 .carousel_btn
 	background-color: $white
@@ -216,11 +247,16 @@ nav
 	text-transform: uppercase
 	padding: 10px 30px
 	cursor: pointer
+	@media only screen and (max-width: 1300px)
+		margin-top: $padding_top_mobile
+	@media only screen and (max-width: 900px)	
+		margin-top: $padding_top_mobile/2		
 	&:hover
 		background-color: #999
 	&:active
 		position: relative
 		top: 2px		
+
 
 
 // ########  ##        #######   ######  ##    ##  ######
