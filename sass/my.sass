@@ -151,7 +151,9 @@ nav
 // ##       ######### ##   ##
 // ##    ## ##     ## ##    ##
 //  ######  ##     ## ##     ##
-
+.carousel_wrapper
+	position: relative
+	
 .carousel
 	background-image: url(../img/carousel/slide-04.jpg)
 	background-size: cover
@@ -163,6 +165,7 @@ nav
 	padding-left: $padding_left*3.3
 	color: $white
 	margin-top: $margin_top
+	position: relative
 	@media only screen and (max-width: 700px)
 		padding-left: $padding_left_mobile
 		text-align: center
@@ -171,6 +174,13 @@ nav
 		padding-bottom: $padding_top_mobile
 	@media only screen and (max-width: 500px)
 		margin-top: $padding_top_mobile
+
+.carousel_background
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
 
 .carousel_title
 	color: $white
